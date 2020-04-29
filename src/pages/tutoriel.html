@@ -48,7 +48,15 @@ title: Tutoriel
                 <div class="column is-centered">
 
                         <!-- Post -->
+                    <!-- Divider -->
+                    <div class="divider is-centered"></div>
+                    <!-- Title & subtitle -->
+                    <h2 class="title is-light is-semibold has-text-centered is-spaced">Le principe est simple. Vous devez juste répondre à des cartes.</h2>
+                    <h4 class="subtitle is-6 is-light has-text-centered is-compact">Une première fois dans un sens. Puis ensuite dans l'autre sens. Une fois la carte révisé plusieurs fois dans les deux sens. Elle sera dans votre cerveau pour toujours. Alors c'est parti ! Tu peux essayer juste en dessous.</h4>
+                    <br>
+                    <br>
 
+                    <h2 class="title is-light is-semibold has-text-centered is-spaced">Cartes côté recto :</h2>
 
                         <!-- Post -->
                         <div class="blog-post">
@@ -59,28 +67,87 @@ title: Tutoriel
                                 </div>
                                 <!-- Content -->
                                 <div class="content">
-                                    <div class="post-title">France  <span class="blog-date">Capitale</span></div>
+                                    <div class="post-title">Australie  <span class="blog-date">Capitale</span></div>
                                     <p>
                                         Quelle est la capitale de ce pays ?
                                     </p>
                                     <!-- Meta -->
                                     <div class="post-meta">
-                                        <form class="login-form" >
                                             <div class="columns is-centered">
                                                 <div class="control-material is-primary">
                                                     <input class="material-input " id="rep" />
                                                 </div>
                                             </div>
-
-                                        </form>
-
-
                                     </div>
+                                    <button class="button is-button k-button k-primary raised has-gradient is-bold" id="answer">
+                                        <span class="text" >J'envoie la réponse</span>
+                                        <span class="front-gradient"></span>
+                                    </button>
                                 </div>
                             </a>
                         </div>
 
+                    <h2 class="title is-light is-semibold has-text-centered is-spaced">Cartes côté verso :</h2>
 
+                    <!-- Post -->
+                    <div class="blog-post">
+                        <a>
+                            <!-- Featured image -->
+                            <div class="featured-image">
+                                <img src="../assets/img/icons/send.png" alt="">
+                            </div>
+                            <!-- Content -->
+                            <div class="content">
+                                <div class="post-title">Camberra  <span class="blog-date">Capitale</span></div>
+                                <p>
+                                    De quel pays cette ville est-elle la capitale ?
+                                </p>
+                                <!-- Meta -->
+                                <div class="post-meta">
+                                        <div class="columns is-centered">
+                                            <div class="control-material is-primary">
+                                                <input class="material-input " id="repverso"/>
+                                            </div>
+                                        </div>
+
+                                </div>
+                                <button class="button is-button k-button k-primary raised has-gradient is-bold" id="answerverso">
+                                    <span class="text" >J'envoie la réponse</span>
+                                    <span class="front-gradient"></span>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <h2 class="title is-light is-semibold has-text-centered is-spaced">Super tu as compris le principe ! Inscrit-toi vite pour avoir de nouvelles cartes et pourvoir créer t'es propres cartes 😃</h2>
+
+                    <script>
+                        document.getElementById("answer").onclick = function(){
+                            var answer = document.getElementById('rep').value;
+
+                            console.log(answer);
+                            if (answer.trim().toLowerCase() === "camberra"){
+                                alert("Bravo vous avez trouvé la bonne réponse ! Vous venez de gagnez 1 points 😃")
+                            }else{
+                                document.getElementById('rep').value = "Camberra";
+                                alert("Ce n'est pas la bonne réponse mais ce n'est pas grave la carte te sera reproposé pour que tu l'apprenne")
+                            }
+
+                        };
+
+                        document.getElementById("answerverso").onclick = function(){
+                            var answer = document.getElementById('repverso').value;
+
+                            console.log(answer);
+                            if (answer.trim().toLowerCase() === "australie"){
+                                alert("Bravo vous avez trouvé la bonne réponse ! Vous venez de gagnez 2 points 😃😃")
+                            }else{
+                                document.getElementById('repverso').value = "Australie";
+                                alert("Ce n'est pas la bonne réponse mais ce n'est pas grave la carte te sera reproposé pour que tu l'apprenne")
+                            }
+
+                        };
+                    </script>
 
 
 
