@@ -4,9 +4,12 @@
   "description": "Sass landing pages",
   "main": "index.js",
   "scripts": {
-    "start": "gulp dev",
+    "start": "gulp serveprod",
     "build": "gulp build",
-    "postinstall": "gulp serveprod"
+    "postinstall": "",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver"
   },
   "engines": {
     "node": "0.10.x",
