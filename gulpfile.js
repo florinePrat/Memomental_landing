@@ -1,6 +1,9 @@
 'use strict';
 
-const {src, dest, watch, series, parallel } = require('gulp');
+const src = require('gulp');
+const dest = require('gulp');
+const watch = require('gulp');
+const series = require('gulp');
 const log = require('fancy-log');
 const colors = require('ansi-colors');
 const browserSync = require('browser-sync').create();
@@ -10,22 +13,16 @@ const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const del = require('del');
 const panini = require('panini');
-const uglify = require('gulp-uglify-es').default;
 const sourcemaps = require('gulp-sourcemaps');
-const imagemin = require('gulp-imagemin');
-const removeCode = require('gulp-remove-code');
-const removeLog = require('gulp-remove-logging');
 const prettyHtml = require('gulp-pretty-html');
 const sassLint = require('gulp-sass-lint');
 const htmllint = require('gulp-htmllint');
 const jshint = require('gulp-jshint');
-const htmlreplace = require('gulp-html-replace');
 const newer = require('gulp-newer');
 const autoprefixer = require('gulp-autoprefixer');
 const accessibility = require('gulp-accessibility');
 const babel = require('gulp-babel');
 const nodepath = 'node_modules/';
-const assetspath = 'assets/';
 const connect = require('gulp-connect');
 
 var gulp = require('gulp');
