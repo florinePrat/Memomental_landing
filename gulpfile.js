@@ -1,4 +1,5 @@
 'use strict';
+
 const {src, dest, watch, series, parallel } = require('gulp');
 const log = require('fancy-log');
 const colors = require('ansi-colors');
@@ -26,11 +27,19 @@ const babel = require('gulp-babel');
 const nodepath = 'node_modules/';
 const assetspath = 'assets/';
 
+var gulp = require('gulp');
+var runSeq = require('run-sequence');
+
+gulp.task('heroku:production', function(){
+    runSeq('clean', 'build', 'minify')
+});
+
+
 // File paths
 const files = {
   scssPath: 'app/scss/**/*.scss',
   jsPath: 'app/js/**/*.js'
-}
+};
 
 // ------------ SETUP TASKS -------------
 // Copy Bulma filed into Bulma development folder
@@ -303,3 +312,10 @@ exports.setup = series(setupBulma);
 // DEV
 exports.dev = series(cleanDist, copyFont, copyData, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS, browserSyncInit, watchFiles);
 
+gulp.task('serveprod', function() {
+    connect.server({
+        root: 'index.html',
+        port: process.env.PORT || 5000, // localhost:5000
+        livereload: false
+    });
+});
