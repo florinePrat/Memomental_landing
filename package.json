@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
-    "postinstall": "gulp dev"
+    "postinstall": "cd dist && gulp dev"
   },
   "author": "Css Ninja",
   "license": "MIT",
