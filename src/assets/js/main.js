@@ -1,33 +1,25 @@
 "use strict";
 
-initPageloader();
+initPreloader();
 
-$(document).ready(function() {
+$(document).ready(function () {
+
+    feather.replace();
 
     initNavbar();
     
     initMobileMenu();
+
+    initSidebar();
+
+    initModals();
+
+    initScrollReveal();
+
+    initBackToTop();
     
-    highlightMenu();
+    initBackgroundImages();
 
-    initPopDropdowns();
-
-    initNavigationTabs();
-
-    initModalVideo();
-
-    feather.replace();
-
-    handleResize();
-
-    AOS.init();
-
-    initLangToggles();
-
-    initAnchorScroll();
-
-    initLikeButton();
-
-    initParticles();
+    initScrollToHash();
 
 })

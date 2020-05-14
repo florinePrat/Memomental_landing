@@ -1,157 +1,213 @@
-/*! _responsive.scss | Krypton | CSS Ninja */
-
 /* ==========================================================================
-Responsive styles
-========================================================================== */
-
-/***
-TABLE OF CONTENTS
-=============================================================================
-0. Tablet Landscape
-1. Tablet Portrait
-2. Mobile
-3. Mixed Mobile / Tablet Portrait
-=============================================================================
-***/
-
-/* ==========================================================================
-0. Tablet Landscape
-========================================================================== */
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-
-}
-
-/* ==========================================================================
-1. Tablet Portrait
-========================================================================== */
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-    .landing-caption {
-        padding: 0 10%;
-        .divider {
-            margin: 0 auto;
-        }
-        h1, h2, p {
-            text-align: center !important;
-        }
-        h1 {
-            padding: 0 10%;
-        }
-    }
-    //features
-    .feature p {
-        padding: 0 25%;
-    }
-    //Side features
-    .side-feature-content {
-        text-align: center;
-        img {
-            display: block;
-            margin: 10px auto;
-        }
-        .divider {
-            margin: 0 auto;
-        }
-        p {
-            padding: 0 12%;
-        }
-    }
-    //tabs
-    .flying-wrapper {
-        ul {
-            .item-content {
-                font-size: 80% !important;
-            }
-        }
-    }
-    //team
-    .team-member-container {
-        margin: 0 25%;
-    }
-}
-
-/* ==========================================================================
-2. Mobile
+Responsive Styles
 ========================================================================== */
 
 @media (max-width: 767px) {
-    //Navbar
-    .navbar {
-        .navbar-item {
-            &.is-nav-link {
-                text-align: center !important;
-            }
-        }
-        .button.slanted {
-            width: 100% !important;
-        }
-        .navbar-menu.is-active {
-            &.light-menu {
-                background: #2d0275 !important;
-            }
-        }
-        &.is-light.is-dark-mobile {
-            background: #2d0275 !important;
-        }
-    }
-    //Lanfing page hero
     .landing-caption {
-        .divider {
-            margin: 0 auto;
-        }
-        h1, h2, p {
-            text-align: center !important;
-        }
-        h1 {
-            font-size: 2.2rem !important;
-        }
-        h2 {
-            font-size: 1.05rem !important;
-        }
-    }
-    //features
-    .side-feature-content {
         text-align: center;
-        img {
-            display: block;
-            margin: 10px auto;
-        }
-        .divider {
-            margin: 0 auto;
-        }
     }
-    //tabs
-    .flying-wrapper {
-        ul {
-            a {
-                width: 23.8% !important;
+
+    .navbar-menu {
+        .is-static {
+            position: absolute;
+            width: 100%;
+        }
+
+        .is-fixed {
+            position: fixed;
+            width: 100%;
+        }
+
+        .navbar-item {
+            text-align: center !important;
+
+            .signup-button {
+                width: 100% !important;
             }
-            .item-content {
-                font-size: 80% !important;
-            }
+        }
+
+        .navbar-link {
+            padding: 10px 20px !important;
         }
     }
-    .ico-card {
-        padding: 20px 30px !important;
+
+    .title {
+        &.section-title {
+            font-size: 2rem !important;
+        }
     }
-    //events
-    .events-content {
-        min-height: 386px;
+
+    .level-left {
+        &.level-social {
+            display: flex;
+            justify-content: flex-start;
+        }
     }
-    //Roadmap bottom image
-    .roadmap-end {
-        left: -100%;
-        transform: translateX(210px);
-        top: -86px;
+
+    .app-side {
+        .title, .subtitle {
+            text-align: center;
+        }
+    }
+
+    .testimonial {
+        margin: 0 auto;
+
+        blockquote {
+            font-size: 1rem;
+        }
+    }
+
+    .pricing-wrap {
+        flex-direction: column;
+
+        .feature-card {
+            margin: 12px auto !important;
+        }
+    }
+
+    .form-button {
+        width: 100%;
     }
 }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .landing-caption {
+        text-align: center;
 
-/* ==========================================================================
-3. Mixed Mobile / Tablet Portrait
-========================================================================== */
+        .subtitle {
+            max-width: 440px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
 
-@media (max-width: 768px) {
+    form {
+        padding: 0 40px;
+    }
 
+    .hero-body {
+        padding-bottom: 0;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-height: 450px !important;
+            max-width: 450px !important;
+        }
+    }
+
+    .navbar-menu {
+        .is-static {
+            position: absolute;
+            width: 100%;
+        }
+
+        .is-fixed {
+            position: fixed;
+            width: 100%;
+        }
+
+        .navbar-item {
+            text-align: center !important;
+
+            .signup-button {
+                width: 100% !important;
+            }
+        }
+
+        .navbar-link {
+            padding: 10px 20px !important;
+        }
+    }
+
+    .side-feature {
+        .subtitle, .title {
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .title {
+            margin-bottom: 12px;
+        }
+
+        img {
+            display: block;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
+
+    .app-side {
+        .title, .subtitle {
+            text-align: center;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
+
+    .icon-list {
+        display: flex;
+
+        .column {
+            max-width: 25%;
+            min-width: 25%;
+        }
+    }
+
+    .testimonial {
+        margin: 0 auto;
+    }
+
+    .is-centered-tablet-portrait {
+        text-align: center !important;
+
+        .divider {
+            margin: 0 auto !important;
+        }
+    }
+
+    .footer-logo, .footer-column {
+        text-align: center;
+    }
+
+    .level {
+        &.is-mobile {
+            justify-content: center !important;
+
+            .level-item {
+                margin: 0 .75rem !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .navbar-menu {
+        .navbar-end {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .navbar-link {
+                padding-right: 0 !important;
+            }
+
+            .button {
+                min-width: 120px;
+            }
+        }
+    }
+
+    .navbar-item {
+        &.is-hidden-mobile {
+            display: none !important;
+        }
+
+        &.is-hidden-desktop.is-hidden-tablet {
+            display: flex !important;
+        }
+    }
 }

@@ -81,7 +81,7 @@ function compileHTML() {
       root: 'src/pages/',
       layouts: 'src/layouts/',
           /*pageLayouts: {
-            //All pages inside src/pages/blog will use the tutoriel.html layout
+            //All pages inside src/pages/blog will use the blog.html layout
             'blog': 'blog'
           }*/
       partials: 'src/partials/',
@@ -97,9 +97,6 @@ function compileJS() {
   console.log('---------------COMPILE CUSTOM JS---------------');
   return src([
       'src/assets/js/functions.js',
-      'src/assets/js/timer.js',
-      'src/assets/js/timeline.js',
-      'src/assets/js/roadmap.js',
       'src/assets/js/main.js',
     ])
     .pipe(babel())
@@ -212,11 +209,6 @@ function concatPlugins() {
     nodepath + 'waypoints/lib/jquery.waypoints.min.js',
     nodepath + 'waypoints/lib/shortcuts/sticky.min.js',
     nodepath + 'jquery.counterup/jquery.counterup.min.js',
-    nodepath + 'feather-icons/dist/feather.min.js',
-    nodepath + 'modal-video/js/modal-video.min.js',
-    nodepath + 'jquery.easing/jquery.easing.min.js',
-    nodepath + 'modal-video/js/jquery-modal-video.min.js',
-    nodepath + 'aos/dist/aos.js',
     //Additional static js assets
     'src/assets/vendor/js/**/*.js',
   ])
@@ -231,8 +223,8 @@ function concatPlugins() {
 function concatCssPlugins() {
   console.log('---------------CONCATENATE CSS PLUGINS---------------');
   return src([
-    nodepath + 'aos/dist/aos.css',
-    nodepath + 'modal-video/css/modal-video.min.css',
+    //nodepath + 'slick-carousel/slick/slick.css',
+    //nodepath + 'slick-carousel/slick/slick-theme.css',
     //Additional static css assets
     'src/assets/vendor/css/**/*.css',
   ])

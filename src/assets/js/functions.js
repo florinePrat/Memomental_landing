@@ -1,12 +1,8 @@
-function initPageloader() {
-    $('.pageloader').toggleClass('is-active');
-
-    $(window).on('load', function () {
-        var pageloaderTimeout = setTimeout(function () {
-            $('.pageloader').toggleClass('is-active');
-            $('.infraloader').toggleClass('is-active')
-            clearTimeout(pageloaderTimeout);
-        }, 700);
+function initPreloader() {
+    $(window).on('load', function () { // makes sure the whole site is loaded
+        $('#status').fadeOut(); // will first fade out the loading animation
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({ 'overflow': 'visible' });
     })
 }
 
@@ -23,263 +19,188 @@ function initNavbar() {
 
 function initMobileMenu() {
     $('.navbar-burger').on("click", function () {
-
         var menu_id = $(this).attr('data-target');
         $(this).toggleClass('is-active');
         $("#" + menu_id).toggleClass('is-active');
-        $('.navbar.is-light').toggleClass('is-dark-mobile');
+        $('.navbar.is-light').toggleClass('is-dark-mobile')
     });
 }
 
-function initPopDropdowns() {
-    $('.dropdown-trigger').on('click', function (event) {
-        event.stopPropagation();
-        $('.dropdown').removeClass('is-active');
-        $(this).closest('.dropdown').addClass('is-active');
+function initSidebar() {
+    //Animate left hamburger icon and open sidebar
+    $('.menu-icon-trigger').click(function (e) {
+        e.preventDefault();
+        $('.menu-icon-wrapper').toggleClass('open');
+        $('.sidebar').toggleClass('is-active');
+    });
+
+    //Close sidebar
+    $('.sidebar-close').click(function () {
+        $('.sidebar').removeClass('is-active');
+        $('.menu-icon-wrapper').removeClass('open');
     })
 
-    $(window).on('click', function (event) {
-        if ($('.dropdown').hasClass('is-active')) {
-            $('.dropdown').removeClass('is-active');
-        }
-    });
-}
-
-function initNavigationTabs() {
-    $('.flying-tabs .flying-child').on('click', function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $(this).siblings('.flying-child').removeClass('is-active');
-        $(this).closest('.flying-wrapper').find('.flying-tabs-content').children('.tab-content').removeClass('is-active');
-
-        $(this).addClass('is-active');
-        $("#" + tab_id).addClass('is-active');
-    })
-}
-
-function initModalVideo() {
-    new ModalVideo('.js-modal-btn', {
-        channel: 'youtube',
-        autoplay: 1
-    });
-}
-
-function highlightMenu() {
-    // Get current page URL
-    var url = window.location.href;
-
-    // remove # from URL
-    url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
-
-    // remove parameters from URL
-    url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
-
-    // select file name
-    url = url.substr(url.lastIndexOf("/") + 1);
-
-    // If file name not available
-    if (url == '') {
-        url = 'index.html';
-    }
-
-    // Loop all menu items
-    $('.navbar .navbar-item a').each(function () {
-
-        // select href
-        var href = $(this).attr('href');
-
-        // Check filename
-        if (url == href) {
-
-            // Add active class
-            $(this).addClass('is-active');
-        }
-    });
-}
-
-function handleResize() {
-    if (window.matchMedia('(min-width: 768px)').matches) {
-        $('.tab-content-wrapper').addClass('is-flex-mobile');
-    } else {
-        $('.tab-content-wrapper').removeClass('is-flex-mobile');
-    }
-
-    $(window).on('resize', function () {
-        if (window.matchMedia('(min-width: 768px)').matches) {
-            $('.tab-content-wrapper').addClass('is-flex-mobile');
-        } else {
-            $('.tab-content-wrapper').removeClass('is-flex-mobile');
-        }
-    })
-}
-
-function initLangToggles() {
-    if ($('.token-documentation').length) {
-        $('.token-documentation ul li').on('click', function () {
-            $('.token-documentation ul li.is-active').removeClass('is-active');
-            $(this).addClass('is-active');
-        })
-    }
-}
-
-function initAnchorScroll() {
-    $('a[href*="#"]')
-        // Remove links that don't actually link to anything
-        .not('[href="#"]')
-        .not('[href="#0"]')
-        .on('click', function (event) {
-            // On-page links
-            if (
-                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                &&
-                location.hostname == this.hostname
-            ) {
-                // Figure out element to scroll to
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                // Does a scroll target exist?
-                if (target.length) {
-                    // Only prevent default if animation is actually gonna happen
-                    event.preventDefault();
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 550, function () {
-                        // Callback after animation
-                        // Must change focus!
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                        } else {
-                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
-                        };
-                    });
-                }
+    //Sidebar menu
+    if ($('.sidebar').length) {
+        $(".sidebar-menu > li.have-children > a").on("click", function (i) {
+            i.preventDefault();
+            if (!$(this).parent().hasClass("active")) {
+                $(".sidebar-menu li ul").slideUp();
+                $(this).next().slideToggle();
+                $(".sidebar-menu li").removeClass("active");
+                $(this).parent().addClass("active");
+            }
+            else {
+                $(this).next().slideToggle();
+                $(".sidebar-menu li").removeClass("active");
             }
         });
+    }
 }
 
-function initLikeButton() {
-    $('.like-button').on('click', function () {
-        $(this).toggleClass('is-active');
-        $('.like-button svg').toggleClass('gelatine');
+function initModals() {
+    $('.modal-trigger').on('click', function () {
+        var modalID = $(this).attr('data-modal');
+        $('#' + modalID).addClass('is-active');
+    })
+    $('.modal-close, .close-modal').on('click', function () {
+        $(this).closest('.modal').removeClass('is-active');
     })
 }
 
-function initParticles() {
-    if ($('#particles-js').length) {
+function initBackToTop() {
+    var pxShow = 600;
+    var scrollSpeed = 500;
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= pxShow) {
+            $("#backtotop").addClass('visible');
+        } else {
+            $("#backtotop").removeClass('visible');
+        }
+    });
+    $('#backtotop a').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, scrollSpeed);
+        return false;
+    });
+}
 
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 50,
-                    "density": {
-                        "enable": true,
-                        "value_area": 1000
-                    }
-                },
-                "color": {
-                    "value": ["#5507fc"]
-                },
+function initBackgroundImages() {
+    if ($(".has-background-image").length) {
+        $(".has-background-image").each(function () {
+            var bgImage = $(this).attr("data-background");
+            var attrColor = $(this).attr("data-color");
+            var attrOpacity = $(this).attr("data-color-opacity");
+            if (bgImage !== undefined) {
+                $(this).css("background-image", "url(" + bgImage + ")");
+            }
+            if (attrColor !== undefined) {
+                $(this)
+                    .find(".overlay")
+                    .css("background-color", "" + attrColor + "");
+            }
+            if (attrOpacity !== undefined) {
+                $(this)
+                    .find(".overlay")
+                    .css("opacity", "" + attrOpacity + "");
+            }
+        });
+    }
+}
 
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 5,
-                        "color": "#5507fc"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.6,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 2,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 120,
-                    "color": "#5507fc",
-                    "opacity": 0.2,
-                    "width": 1.6
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 3,
-                    "direction": "top",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": false
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
+function initScrollReveal() {
+    window.sr = ScrollReveal();
+
+        // Simple reveal
+        sr.reveal('.is-title-reveal', {
+            origin: 'bottom',
+            distance: '20px',
+            duration: 600,
+            delay: 100,
+            rotate: { x: 0, y: 0, z: 0 },
+            opacity: 0,
+            scale: 1,
+            easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+            container: window.document.documentElement,
+            mobile: true,
+            reset: false,
+            useDelay: 'always',
+            viewFactor: 0.2,
+
         });
 
-    }
+        // Revealing features
+        sr.reveal('.is-feature-reveal', {
+            origin: 'bottom',
+            distance: '20px',
+            duration: 600,
+            delay: 100,
+            rotate: { x: 0, y: 0, z: 0 },
+            opacity: 0,
+            scale: 1,
+            easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+            container: window.document.documentElement,
+            mobile: true,
+            reset: true,
+            useDelay: 'always',
+            viewFactor: 0.2,
+
+        }, 160);
+
+        // Revealing features
+        sr.reveal('.is-icon-reveal', {
+            origin: 'bottom',
+            distance: '20px',
+            duration: 600,
+            delay: 100,
+            rotate: { x: 0, y: 0, z: 0 },
+            opacity: 0,
+            scale: 1,
+            easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+            container: window.document.documentElement,
+            mobile: true,
+            reset: false,
+            useDelay: 'always',
+            viewFactor: 0.2,
+
+        }, 160);
+}
+
+function initScrollToHash() {
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function (event) {
+        // On-page links
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 550, function () {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    };
+                });
+            }
+        }
+    });
 }

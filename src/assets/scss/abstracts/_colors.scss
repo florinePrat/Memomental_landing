@@ -1,38 +1,36 @@
-/*! _colors.scss | Krypton | CSS Ninja */
-
 /* ==========================================================================
-Krypton global colors 
-========================================================================== */
-
-/***
-TABLE OF CONTENTS
-=============================================================================
-0. Variables
-=============================================================================
-***/
-
-/* ==========================================================================
-0. Variables
+Color variables
 ========================================================================== */
 
 $white: #fff;
 $smoke-white: #fcfcfc;
-$placeholder: #cecece;
-$light-grey: #f9f9f9;
-$muted-grey: #999;
-$title-grey: #A9ABAC;
-$fade-grey: #ededed;
-$accent-grey: #ccc;
-$dark-text: #4a4a4a;
-$chosen-grey: #e0e0e0;
-$chosen-dark-grey: #66676b;
-$grey-6: #666;
-$grey: #ccc;
-$section-grey: #fcfcfc;
-$light-blue: rgba(94,147,255,.9);
+$grey-white: #f2f2f2;
 
-$sidebar: #344258;
-$red: #FF7273;
-$blue: #039BE5;
-$green: #00b289;
-$orange: #eda514;
+$primary: #2bc58f;
+$secondary: #2bc58f;
+$accent: #00efb7;
+
+$fade-grey: #ededed;
+$light-grey: #EFF4F7;
+$title-grey: #A9ABAC;
+$blue-grey: #444F60;
+$muted-grey: #999;
+$light-blue-grey: #98a9c3;
+$medium-grey: #66676b;
+$basaltic-grey: #878787;
+$purple: #7F00FF;
+$mint: #11FFBD;
+$bloody: #FC354C;
+$pinky: #ff00cc;
+$frost: #004e92;
+$placeholder: #cecece;
+$dark-grey: #344258;
+$border-grey: #ccc;
+$muted-grey: #999;
+$section-grey: #fbfbfb;
+
+//Heading font
+$font: 'Montserrat', sans-serif !important;
+
+//Shadow
+$light-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);

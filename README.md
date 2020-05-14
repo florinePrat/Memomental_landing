@@ -1,18 +1,18 @@
-# Krypton Landing page
-![](https://cssninja.io/storage/app/media/external/krypton/krypton-preview.png)
+# Fresh Landing page
+![](https://cssninja.io/storage/app/media/external/fresh/fresh-hero-ui8.png)
 
-Krypton is a one page landing page starter built by [Css Ninja Studio](https://cssninja.io). Krypton is licensed under the MIT license.
+Fresh is a one page landing page starter built by [Css Ninja Studio](https://cssninja.io). Fresh is licensed under the MIT license.
 
-You can access the demo [here](https://cssninjastudio.github.io/Krypton/).
+You can access the demo [here](https://cssninjastudio.github.io/fresh/).
 
 ## Details
 
-Krypton is developed with the [Bulma css framework](https://bulma.io)
+Fresh is developed with the [Bulma css framework](https://bulma.io)
 
 **Version 3.0.0**
 
 ## Usage
-Krypton is now a Bulma starter fully bundled with **npm** and **gulp**. Bulma has been upgraded to the latest version **0.8.0**.
+Fresh is now a Bulma starter fully bundled with **npm** and **gulp**. Bulma has been upgraded to the latest version **0.8.0**.
 
 * Clone or download the repo
 * Run `npm install`
@@ -22,17 +22,17 @@ Most of the dependencies have been sanitized. However, **Panini** will keep thro
 
 ## Changelog
 
-**Krypton 3.0**
+**Fresh 3.0**
 * Upgraded to gulp 4 and nodejs 10.15.3
 * Upgraded Bulma to 0.8.0
 * Cleaned code and redesigned some of the features
 
-**Krypton 2.1**
+**Fresh 2.1**
 * Improved page responsiveness particularly on tablet for both orientations, and mobile
 * Fixed small layout issues
 * Added a modal login form
 
-**Krypton 2.0**
+**Fresh 2.0**
 * Everything is now handled by gulp and npm
 * Bulma version upgraded to 0.7
 * Bulma source sass is editable (note that the `@widescreen` variable has been set to false)
@@ -56,7 +56,7 @@ If you've found an issue or a bug, you can report it in the issues section of th
 
 ## More
 
-You liked Krypton? Find more premium bulma templates on [Css Ninja](https://cssninja.io/category/all).
+You liked Fresh? Find more premium bulma templates on [Css Ninja](https://cssninja.io/category/all).
 
 Check also our premium Envato bulma themes [Css Ninja](https://cssninja.io/themes).
 

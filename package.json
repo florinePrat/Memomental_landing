@@ -1,5 +1,5 @@
 {
-  "name": "krypton",
+  "name": "bulkit",
   "version": "3.0.0",
   "description": "Sass landing pages",
   "main": "index.js",
@@ -47,16 +47,12 @@
     "zoom-vanilla.js": "^2.0.6"
   },
   "dependencies": {
-    "aos": "^2.2.0",
     "bulma": "^0.8.0",
-    "cryptofont": "^0.1.1",
+    "jquery": "^3.4.1",
+    "bulma-extensions": "^6.2.7",
     "feather-icons": "^4.7.0",
-    "jquery": "^3.5.0",
     "jquery-waypoints": "^2.0.5",
     "jquery.counterup": "^2.1.0",
-    "jquery.easing": "^1.4.1",
-    "modal-video": "^2.3.2",
-    "particlesjs": "2.2.0",
     "scrollreveal": "^3.4.0",
     "slick-carousel": "^1.8.1"
   }
