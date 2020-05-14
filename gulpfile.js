@@ -26,6 +26,7 @@ const accessibility = require('gulp-accessibility');
 const babel = require('gulp-babel');
 const nodepath = 'node_modules/';
 const assetspath = 'assets/';
+const connect = require('gulp-connect');
 
 var gulp = require('gulp');
 var runSeq = require('run-sequence');
@@ -34,6 +35,13 @@ gulp.task('heroku:production', function(){
     runSeq('clean', 'build', 'minify')
 });
 
+gulp.task('serveprod', function() {
+    connect.server({
+        root: "/src/pages/index.html",
+        port: process.env.PORT || 5000, // localhost:5000
+        livereload: false
+    });
+});
 
 // File paths
 const files = {
@@ -312,10 +320,4 @@ exports.setup = series(setupBulma);
 // DEV
 exports.dev = series(cleanDist, copyFont, copyData, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS, browserSyncInit, watchFiles);
 
-gulp.task('serveprod', function() {
-    connect.server({
-        root: 'index.html',
-        port: process.env.PORT || 5000, // localhost:5000
-        livereload: false
-    });
-});
+
