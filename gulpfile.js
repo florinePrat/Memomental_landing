@@ -37,9 +37,11 @@ gulp.task('heroku:production', function(){
 
 gulp.task('serveprod', function() {
     connect.server({
-        root: "/src/pages/index.html",
-        port: process.env.PORT || 5000, // localhost:5000
-        livereload: false
+        root: "index.html",
+        host: '0.0.0.0',
+        port: process.env.PORT,
+        livereload: false,
+        open: false
     });
 });
 

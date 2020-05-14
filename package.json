@@ -8,6 +8,10 @@
     "build": "gulp build",
     "postinstall": "gulp serveprod"
   },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "2.1.x"
+  },
   "author": "Css Ninja",
   "license": "MIT",
   "repository": {
