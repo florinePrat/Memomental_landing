@@ -12,8 +12,8 @@
     "preprotractor": "npm run update-webdriver"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "2.1.x"
+    "node": "13.5.0",
+    "npm": "6.13.6"
   },
   "author": "Css Ninja",
   "license": "MIT",
