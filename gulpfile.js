@@ -35,7 +35,6 @@ gulp.task('build', function() {
         host: '0.0.0.0',
         port: process.env.PORT,
         livereload: false,
-        open: false
     });
 });
 
