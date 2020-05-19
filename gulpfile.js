@@ -29,7 +29,7 @@ gulp.task('heroku:production', function(){
     runSeq('clean', 'build', 'minify')
 });
 
-gulp.task('serveprod', function() {
+gulp.task('build', function() {
     connect.server({
         root: "index.html",
         host: '0.0.0.0',
