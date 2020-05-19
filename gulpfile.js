@@ -1,9 +1,6 @@
 'use strict';
 
-const src = require('gulp');
-const dest = require('gulp');
-const watch = require('gulp');
-const series = require('gulp');
+const {src,dest,watch,series} = require('gulp');
 const log = require('fancy-log');
 const colors = require('ansi-colors');
 const browserSync = require('browser-sync').create();
