@@ -1,353 +1,182 @@
- <!doctype html>
+<!doctype html>
 <html lang="fr">
- <head>
-   <!-- Required meta tags always come first -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-   <title> Memomental | FlashCard app</title>
-   <link rel="icon" type="image/png" href="Landkit-1.1.0/src/assets/img/favicon.png" />
+        <!-- Title & Icon -->
+        <title> Memomental | FlashCard app</title>
+        <link rel="icon" type="image/png" href="Landkit-1.1.0/src/assets/img/favicon.png" />
 
-   <!--Core CSS -->
-   <link rel="stylesheet" href="Landkit-1.1.0/src/assets/css/bulma.css">
-   <link rel="stylesheet" type="text/css" href="Landkit-1.1.0/src/assets/css/core.css">
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+        <!-- Core CSS -->        
+        <link rel="stylesheet" type="text/css" href="Landkit-1.1.0/src/assets/css/core.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
 
- </head>
-  <body>
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" />
 
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
 
-    <!-- WELCOME
-    ================================================== -->
-    <section style="height: 100vh;width: 100vw;">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column is-6 landing-caption">
-              <h1 class="title is-1 is-bold is-spaced">
-                Memomental
-              </h1>
-              <h2 class="subtitle is-5 is-muted">Apprendre n'as jamais été aussi simple.</h2>
-              <div class="button-wrap">
-                <a class="button cta is-rounded" href="https://youtu.be/QSUfySaBsQk">
-                  Découvrir
-                </a>
-                <a class="button cta is-rounded primary-btn raised" href="https://app.memomental.io/">
-                  Rejoindre la bêta
-                </a>
-              </div>
-            </div>
-            <div class="column is-6" style="border: solid 1px green;">
-              <figure class="image">
-                <img style="width: 300%;border: solid 1px red;" src="Landkit-1.1.0/src/assets/img/illustrations/front.png" alt="Description">
-              </figure>
-            </div>
+        <!-- UPDATED CSS -->
+        <link rel="stylesheet" href="./stylesheet.css">
 
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- FEATURES
-    ================================================== -->
-    <section class="section section-feature-grey is-medium">
-      <div class="container">
-        <div class="title-wrapper has-text-centered">
-          <h2 class="title is-2">Votre cerveau peut tout retenir</h2>
-          <h3 class="subtitle is-5 is-muted">Il faut seulement un peu l'entraîner 😀</h3>
-          <div class="divider is-centered"></div>
-        </div>
-
-        <div class="content-wrapper">
-          <div class="columns">
-            <div class="column is-one-third">
-              <div class="feature-card is-bordered has-text-centered is-feature-reveal">
-                
-                <div class="card-title">
-                  <h4>Créez des connexion neuronale 🧠</h4>
+    </head>
+    <body>        
+        <section id="main">
+            <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-wrap" style="height: 100%;">
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <img src="logo.png" alt="application" class="uk-align-center" id="logo">
                 </div>
-                <div class="card-icon">
-                  <img src="Landkit-1.1.0/src/assets/img/icons/web.svg">
-                </div>
-                <div class="card-text">
-                  <p style="color: #000644">Avec memomental votre cerveau n'aura jamais été aussi performant! Vous allez vous surprendre 🖇️</p>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="feature-card is-bordered has-text-centered is-feature-reveal">
-                
-                <div class="card-title">
-                  <h4>Apprenez en vous amusant 🕹️</h4>
-                </div>
-                <div class="card-icon">
-                  <img src="Landkit-1.1.0/src/assets/img/icons/rocket.svg">
-                </div>
-                <div class="card-text">
-                  <p style="color: #000644">Un système basé sur l'apprentissage ludique. Quelques minutes par jours suffisent pour apprendre de grandes choses 😉</p>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="feature-card is-bordered has-text-centered is-feature-reveal">
-                <div class="card-title">
-                  <h4>Soyez créatif 🖌️</h4>
-                </div>
-                <div class="card-icon">
-                  <img src="Landkit-1.1.0/src/assets/img/icons/light-bulb.svg">
-                </div>
-                <div class="card-text">
-                  <p style="color: #000644">Vous pouvez créer vos propres paquets de cartes. Retenez les informations qui vous sont vraiment utiles 😉</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
-    <!-- ABOUT
-    ================================================== -->
-    <section class="section is-medium" id="feature">
-      <div class="container">
-        <div class="title-wrapper has-text-centered">
-          <h2 class="title is-2">Fonctionnalités</h2>
-          <h3 class="subtitle is-5 is-muted">Rendons à votre cerveau ses capacités</h3>
-          <div class="divider is-centered"></div>
-        </div>
-
-        <div class="columns is-vcentered side-feature mt-60">
-          <div class="column is-4 is-offset-2">
-            <h2 class="title is-3 mb-10 is-title-reveal">Apprend avec tes amis</h2>
-            <p class="subtitle is-5 is-muted">Challenge tes amis sur des paqutes de cartes. L'apprentissage à plusieurs est le meilleur moyen de réviser toujours plus chaque jour.</p>
-          </div>
-          <div class="column is-5">
-            <img src="Landkit-1.1.0/src/assets/img/illustrations/features/position.png" style="width: 65%" alt="">
-          </div>
-        </div>
-
-        <div class="columns is-vcentered side-feature mt-60">
-          <div class="column is-5 is-offset-1">
-            <img style="width: 80%" src="Landkit-1.1.0/src/assets/img/illustrations/features/capitale.png" alt="">
-          </div>
-          <div class="column is-4 is-offset-1">
-            <h2 class="title is-3 mb-10 is-title-reveal">Révise tes cartes chaque jour</h2>
-            <p class="subtitle is-5 is-muted">Chaque jour tu peux retrouver les cartes que tu dois apprendre.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- STATS
-    ================================================== -->
-
-    <section class="section is-medium  has-background-image" data-background="https://source.unsplash.com/g30P1zcOzXo/1600x900" data-color="#2bc58f" data-color-opacity=".6">
-      <div class="overlay"></div>
-      <div class="container">
-
-        <div class="title-wrapper has-text-centered">
-          <h2 class="title is-2 is-spaced">Nous utilisateurs adore</h2>
-          <h3 class="subtitle is-5">Regarde ce qu'ils disent de nous</h3>
-        </div>
-
-        <div class="content-wrapper">
-          <div class="columns is-vcentered">
-            <div class="column is-4">
-              <figure class="testimonial">
-                <blockquote>
-                  Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-                </blockquote>
-                <div class="author">
-                  <img src="Landkit-1.1.0/src/assets/img/illustrations/faces/1.png" alt=""/>
-                  <h5>Fiona</h5>
-                </div>
-              </figure>
-            </div>
-            <div class="column is-4">
-              <figure class="testimonial">
-                <blockquote>
-                  Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-                </blockquote>
-                <div class="author">
-                  <img src="Landkit-1.1.0/src/assets/img/illustrations/faces/2.png" alt=""/>
-                  <h5>Un barbu anonyme</h5>
-                </div>
-              </figure>
-            </div>
-            <div class="column is-4">
-              <figure class="testimonial">
-                <blockquote>
-                  Réviser une information dans les deux sens en suivant la suite de fibonacci. Simple et efficace pour retenir tout type de chose sur du long terme. J'adore le design de l'app.
-                </blockquote>
-                <div class="author">
-                  <img src="Landkit-1.1.0/src/assets/img/illustrations/faces/3.png" alt=""/>
-                  <h5>Toinon</h5>
-                </div>
-
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section section-light-grey is-medium" id="contact">
-      <div class="container">
-        <div class="title-wrapper has-text-centered">
-          <h2 class="title is-2 is-spaced">Contactez-nous !</h2>
-          <h3 class="subtitle is-5 is-muted">Proposez-nous de nouvelles fonctionnalités</h3>
-          <div class="divider is-centered"></div>
-        </div>
-
-        <div class="content-wrapper">
-          <div class="columns">
-            <div class="column is-6 is-offset-3">
-              <form>
-                <div class="columns is-multiline">
-                  <div class="column is-6">
-                    <input class="input is-medium" id="subject" type="text" placeholder="Sujet *">
-                  </div>
-                  <div class="column is-12">
-                    <textarea class="textarea" id="message" rows="6" placeholder=""></textarea>
-                  </div>
-                  <div class="column is-12">
-                    <div class="form-footer has-text-right mt-10">
-                      <button type="submit" id="mail-link" class="button cta is-large primary-btn form-button raised is-clear" onclick="loadEvents()" >Send Message</button>
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <div id="title">
+                        <h1 class="uk-text-bold uk-heading-large uk-animation-scale-up uk-transform-origin-bottom-left" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Memomental<span style="color: #2ED197;">.</span></h1>
+                        <h2 class="uk-h3 uk-margin-remove-top uk-animation-scale-up uk-transform-origin-bottom-left" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Apprendre n'as jamais été aussi simple</h2>
+                        <div style="margin-top: 2rem;" uk-scrollspy="target: > a; cls: uk-animation-fade; delay: 200;">
+                            <a class="uk-button uk-button-default" style="border-radius: 2rem;" href="https://youtu.be/QSUfySaBsQk" target="_blank">Découvrir</a>
+                            <a class="uk-button uk-button-primary uk-margin-left" style="background-color: #2ED197;border-radius: 2rem;" href="https://app.memomental.io/">Rejoindre la bêta</a>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </form>
             </div>
-          </div>
-        </div>
-        <script type="text/javascript">
-          function loadEvents() {
-            console.log("function call");
-            var mailString;
-            function updateMailString() {
-              mailString = '?subject=' + encodeURIComponent($('#subject').val())
-                      + '&body=' + encodeURIComponent($('#message').val());
-              $('#mail-link').attr('href',  'app.memomental@gmail.com' + mailString);
-              console.log(mailString);
-            }
-            $( "#subject" ).focusout(function() { updateMailString(); });
-            $( "#message" ).focusout(function() { updateMailString(); });
-            updateMailString();
-          }
-        </script>
-      </div>
-    </section>
-
-
-
-
-    <div id="auth-modal" class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <div class="flex-card auth-card">
-          <div class="tabs-wrapper">
-            <div class="tabs">
-              <ul>
-                <li class="is-active" data-tab="login-tab"><a>Login</a></li>
-                <li data-tab="register-tab"><a>Register</a></li>
-              </ul>
+            <div style="position: absolute;bottom: 2%;left: 50%;transform: translateX(-50%);">
+                <a uk-icon="icon: chevron-down; ratio: 2" href="#assets"></a>
             </div>
-            <div id="login-tab" class="tab-content is-active">
-              <div class="field">
-                <label>Username</label>
-                <div class="control">
-                  <input type="text" class="input is-medium" placeholder="Enter username">
+        </section>
+
+        <section id="assets">
+            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Ton cerveau peut tout retenir</h2>
+            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">Il lui faut seulement un peu d'entraînement</h3>
+            <div style="border-bottom: solid 2px #2ED197;width: 10%; margin: auto;margin-top: 4rem;"></div>
+            <div class="uk-flex uk-flex-center uk-text-center uk-flex-wrap uk-flex-wrap-around" style="margin-top:5rem;" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300;">
+
+                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">                    
+                    <div class="uk-card-body">
+                        <img src="Landkit-1.1.0/src/assets/img/icons/web.svg" height="170px" width="170px">
+                        <div>
+                            <h2 style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Développes tes connexions</h2>
+                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Ton cerveau n'aura jamais été aussi performant, il suffisait juste de le stimuler.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="field">
-                <label>Password</label>
-                <div class="control">
-                  <input type="password" class="input is-medium" placeholder="Enter password">
+
+                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
+                    <div class="uk-card-body">
+                        <img src="Landkit-1.1.0/src/assets/img/icons/rocket.svg" height="170px" width="170px">
+                        <div>
+                            <h2 style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Fixes toi des objectifs</h2>
+                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Quelques minutes par jours suffisent pour atteindre tes objectifs tout en t'amusant.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <a class="button is-fullwidth secondary-btn is-rounded raised">Log in</a>
+                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
+                    <div class="uk-card-body">
+                        <img src="Landkit-1.1.0/src/assets/img/icons/light-bulb.svg" height="170px" width="170px">
+                        <div>
+                            <h2 style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Sois créatif</h2>
+                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Tu peux créer tes propres paquets. Retiens seulement les informations qui te sont utiles.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-
-    <footer class="footer footer-dark">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <div class="footer-logo">
-              <img src="Landkit-1.1.0/src/assets/img/logos/logoBand.png">
+        </section>
+        <section id="features" class="section">
+            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Fonctionnalités</h2>
+            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">Rendons à ton cerveau ses capacités</h3>
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-wrap uk-flex-wrap-around uk-margin-large-top" uk-scrollspy="target: > div; cls: uk-animation-scale-up; delay: 300;" style="width: 94%;margin-left: 3%;">
+                
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <div class="uk-align-right@m uk-margin-right@m uk-width-1-2@m">
+                        <h2 style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Apprends avec tes amis</h2>
+                        <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Challenge tes amis sur des paquets de cartes. L'apprentissage à plusieurs est le meilleur moyen de réviser toujours plus chaque jour.</p>
+                    </div>
+                </div>
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/position.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-left@m">
+                </div>
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/capitale.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-right@m">
+                </div>
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <div class="uk-align-left@m uk-margin-left@m uk-width-1-2@m">
+                        <h2 style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Révises tes cartes</h2>
+                        <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Chaque jour les cartes que tu dois réviser te seront proposées. Tu peux gagner des points bonus si tu réalises des combos !</p>
+                    </div>
+                </div>
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <div class="uk-align-right@m uk-margin-right@m uk-width-1-2@m">
+                        <h2 style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Suis ton évolution</h2>
+                        <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Tu peux visualiser ton évolution en direct sur l'écran principal de l'application. Tu auras bientôt accès à une section statistiques.</p>
+                    </div>
+                </div>
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/home.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-left@m">
+                </div>              
             </div>
-          </div>
-          <div class="column">
-            <div class="footer-column">
-              <div class="footer-header">
-                <h3>Produits</h3>
-              </div>
-              <ul class="link-list">
-                <li><a href="#feature">Fonctionnalités</a></li>
-                <li><a href="https://youtu.be/QSUfySaBsQk">Comment fonctionne la mémoire ?</a></li>
-                <li><a href="https://fr.wikipedia.org/wiki/Suite_de_Fibonacci">La suite de fibonacci ?</a></li>
-                <li><a href="#">Les améliorations à venir</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="column">
-            <div class="footer-column">
-              <div class="footer-header">
-                <h3>Contactez-nous</h3>
-              </div>
-              <ul class="link-list">
-                <li><a href="mailto:app.memomental@gmail.com">Envoyez-nous un mail</a></li>
-                <li><a href="#">Contactez-nous sur messenger</a></li>
-              </ul>
-            </div>
-          </div>
+            
+        </section>
+        <section id="users" class="section">
+            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Nos utilisateurs adorent</h2>
+            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">C'est eux qui en parlent le mieux</h3>
+            <div style="border-bottom: solid 2px #2ED197;width: 10%; margin: auto;margin-top: 4rem;"></div>
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-wrap uk-flex-wrap-around" style="margin-top:5rem;margin-bottom: 5rem;" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300;">
 
-          <div class="column">
-            <div class="footer-column">
-              <div class="footer-header">
-                <h3>Follow Us</h3>
-                <nav class="level is-mobile">
-                  <div class="level-left">
-                    <a class="level-item" href="https://github.com/florinePrat/NewMemomental">
-                                    <span class="icon">
-                                        <icon name="logo-github" size="large"></icon>
-                                    </span>
-                    </a>
-                    <a class="level-item" href="https://facebook.com/#">
-                                    <span class="icon">
-                                        <icon name="logo-facebook" size="large"></icon>
-                                    </span>
-                    </a>
-                    <a class="level-item" href="https://linkedin.com/#">
-                                    <span class="icon">
-                                        <icon name="logo-linkedin" size="large"></icon>
-                                    </span>
-                    </a>
-                    <a class="level-item" href="https://instagram.com/#">
-                                    <span class="icon">
-                                        <icon name="logo-instagram" size="large"></icon>
-                                    </span>
-                    </a>
-                  </div>
-                </nav>
-              </div>
+                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="70" height="70" src="Landkit-1.1.0/src/assets/img/illustrations/faces/2.png">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">Lucas</h3>
+                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-15T19:00">14 Juin 2020</time></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"J'adore! Cela faisait longtemps que je cherchais une app gratuite comme celle là et je ne suis pas déçu. Design au top et c'est l'une des meilleures méthodes d'apprentissage que j'ai pu tester."</p>
+                    </div>
+                </div>
+
+                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">                    
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="70" height="70" src="Landkit-1.1.0/src/assets/img/illustrations/faces/1.png">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">Fiona</h3>
+                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-15T19:00">15 Juin 2020</time></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"File d'attente, bus, métro, dès que j'ai 5 min de libre je lance l'application au lieu de passer mon temps sur les réseaux sociaux. Très productif, progrès visible dès les premiers jours."</p>
+                    </div>
+                </div>
+
+                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="70" height="70" src="Landkit-1.1.0/src/assets/img/illustrations/faces/3.png">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">Toinon</h3>
+                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-15T19:00">11 Juin 2020</time></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"Réviser une information dans les deux sens en suivant la suite de Fibonacci. Simple et efficace pour retenir tout type de chose sur du long terme. J'adore le design de l'app."</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-
-  </body>
+        </section>
+        <footer>
+            <p class="uk-text-center">&copy;Memomental 2020-2021 | Made in Montpellier</p>
+        </footer>
+    </body>
 </html>

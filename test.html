@@ -12,7 +12,6 @@
 
         <!-- Core CSS -->        
         <link rel="stylesheet" type="text/css" href="Landkit-1.1.0/src/assets/css/core.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
 
         <!-- UIkit CSS -->
@@ -20,9 +19,9 @@
 
         <!-- UIkit JS -->
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"></script>
 
-<link rel="stylesheet" href="./stylesheet.css">
+        <!-- UPDATED CSS -->
+        <link rel="stylesheet" href="./stylesheet.css">
 
     </head>
     <body>        
@@ -33,11 +32,11 @@
                 </div>
                 <div class="uk-width-1-1 uk-width-1-2@m">
                     <div id="title">
-                        <h1 class="uk-text-bold uk-heading-large" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Memomental<span style="color: #2ED197;">.</span></h1>
-                        <h2 class="uk-h3 uk-margin-remove-top" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Apprendre n'as jamais été aussi simple</h2>
-                        <div style="margin-top: 2rem;">
-                            <button class="uk-button uk-button-default" style="border-radius: 2rem;">Découvrir</button>
-                            <button class="uk-button uk-button-primary uk-margin-left" style="background-color: #2ED197;border-radius: 2rem;">Rejoindre la bêta</button>
+                        <h1 class="uk-text-bold uk-heading-large uk-animation-scale-up uk-transform-origin-bottom-left" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Memomental<span style="color: #2ED197;">.</span></h1>
+                        <h2 class="uk-h3 uk-margin-remove-top uk-animation-scale-up uk-transform-origin-bottom-left" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Apprendre n'as jamais été aussi simple</h2>
+                        <div style="margin-top: 2rem;" uk-scrollspy="target: > a; cls: uk-animation-fade; delay: 200;">
+                            <a class="uk-button uk-button-default" style="border-radius: 2rem;" href="https://youtu.be/QSUfySaBsQk" target="_blank">Découvrir</a>
+                            <a class="uk-button uk-button-primary uk-margin-left" style="background-color: #2ED197;border-radius: 2rem;" href="https://app.memomental.io/">Rejoindre la bêta</a>
                         </div>
                     </div>
                 </div>
@@ -48,17 +47,17 @@
         </section>
 
         <section id="assets">
-            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;">Ton cerveau peut tout retenir</h2>
-            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Il lui faut seulement un peu d'entraînement</h3>
+            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Ton cerveau peut tout retenir</h2>
+            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">Il lui faut seulement un peu d'entraînement</h3>
             <div style="border-bottom: solid 2px #2ED197;width: 10%; margin: auto;margin-top: 4rem;"></div>
-            <div class="uk-flex uk-flex-center uk-text-center uk-flex-wrap uk-flex-wrap-around" style="margin-top:5rem;">
+            <div class="uk-flex uk-flex-center uk-text-center uk-flex-wrap uk-flex-wrap-around" style="margin-top:5rem;" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300;">
 
                 <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">                    
                     <div class="uk-card-body">
                         <img src="Landkit-1.1.0/src/assets/img/icons/web.svg" height="170px" width="170px">
                         <div>
                             <h2 style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Développes tes connexions</h2>
-                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Votre cerveau n'aura jamais été aussi performant, il suffisait juste de le stimuler.</p>
+                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Ton cerveau n'aura jamais été aussi performant, il suffisait juste de le stimuler.</p>
                         </div>
                     </div>
                 </div>
@@ -68,7 +67,7 @@
                         <img src="Landkit-1.1.0/src/assets/img/icons/rocket.svg" height="170px" width="170px">
                         <div>
                             <h2 style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Fixes toi des objectifs</h2>
-                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Quelques minutes par jours suffisent pour atteindre vos objectifs tout en vous amusant.</p>
+                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Quelques minutes par jours suffisent pour atteindre tes objectifs tout en t'amusant.</p>
                         </div>
                     </div>
                 </div>
@@ -77,68 +76,52 @@
                         <img src="Landkit-1.1.0/src/assets/img/icons/light-bulb.svg" height="170px" width="170px">
                         <div>
                             <h2 style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Sois créatif</h2>
-                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Vous pouvez créer vos propres paquets. Retenez seulement les informations qui vous sont utiles.</p>
+                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Tu peux créer tes propres paquets. Retiens seulement les informations qui te sont utiles.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="features" class="section">
-            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;">Fonctionnalités</h2>
-            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Rendons à ton cerveau ses capacités</h3>
-            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-wrap uk-flex-wrap-around uk-margin-large-top">
-                <div class="uk-width-1-2 uk-width-1-2@m">
-                    <div class="uk-align-right uk-margin-right uk-width-1-2@m">
+            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Fonctionnalités</h2>
+            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">Rendons à ton cerveau ses capacités</h3>
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-wrap uk-flex-wrap-around uk-margin-large-top" uk-scrollspy="target: > div; cls: uk-animation-scale-up; delay: 300;" style="width: 94%;margin-left: 3%;">
+                
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <div class="uk-align-right@m uk-margin-right@m uk-width-1-2@m">
                         <h2 style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Apprends avec tes amis</h2>
                         <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Challenge tes amis sur des paquets de cartes. L'apprentissage à plusieurs est le meilleur moyen de réviser toujours plus chaque jour.</p>
                     </div>
                 </div>
-                <div class="uk-width-1-2 uk-width-1-2@m">
-                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/position.png" alt="image1" style="width: 50%;">
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/position.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-left@m">
                 </div>
-                <div class="uk-width-1-2 uk-width-1-2@m">
-                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/capitale.png" alt="image1" style="width: 50%;" class="uk-align-right">
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/capitale.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-right@m">
                 </div>
-                <div class="uk-width-1-2 uk-width-1-2@m">
-                    <div class="uk-margin-left uk-width-1-2@m">
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <div class="uk-align-left@m uk-margin-left@m uk-width-1-2@m">
                         <h2 style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Révises tes cartes</h2>
                         <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Chaque jour les cartes que tu dois réviser te seront proposées. Tu peux gagner des points bonus si tu réalises des combos !</p>
                     </div>
                 </div>
-                <div class="uk-width-1-2 uk-width-1-2@m">
-                    <div class="uk-align-right uk-margin-right uk-width-1-2@m">
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <div class="uk-align-right@m uk-margin-right@m uk-width-1-2@m">
                         <h2 style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Suis ton évolution</h2>
                         <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Tu peux visualiser ton évolution en direct sur l'écran principal de l'application. Tu auras bientôt accès à une section statistiques.</p>
                     </div>
                 </div>
-                <div class="uk-width-1-2 uk-width-1-2@m">
-                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/home.png" alt="image1" style="width: 50%;">
+                <div class="uk-width-1-1 uk-width-1-2@m">
+                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/home.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-left@m">
                 </div>              
             </div>
             
         </section>
         <section id="users" class="section">
-            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;">Nos utilisateurs adorent</h2>
-            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">C'est eux qui en parlent le mieux</h3>
+            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Nos utilisateurs adorent</h2>
+            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">C'est eux qui en parlent le mieux</h3>
             <div style="border-bottom: solid 2px #2ED197;width: 10%; margin: auto;margin-top: 4rem;"></div>
-            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-wrap uk-flex-wrap-around" style="margin-top:5rem;margin-bottom: 5rem;;">
-
-                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">                    
-                    <div class="uk-card-header">
-                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto">
-                                <img class="uk-border-circle" width="70" height="70" src="Landkit-1.1.0/src/assets/img/illustrations/faces/1.png">
-                            </div>
-                            <div class="uk-width-expand">
-                                <h3 class="uk-card-title uk-margin-remove-bottom">Fiona</h3>
-                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-15T19:00">15 Juin 2020</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
-                    </div>
-                </div>
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-wrap uk-flex-wrap-around" style="margin-top:5rem;margin-bottom: 5rem;" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300;">
 
                 <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
                     <div class="uk-card-header">
@@ -153,7 +136,24 @@
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"J'adore! Cela faisait longtemps que je cherchais une app gratuite comme celle là et je ne suis pas déçu. Design au top et c'est l'une des meilleures méthodes d'apprentissage que j'ai pu tester."</p>
+                    </div>
+                </div>
+
+                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">                    
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="70" height="70" src="Landkit-1.1.0/src/assets/img/illustrations/faces/1.png">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">Fiona</h3>
+                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-15T19:00">15 Juin 2020</time></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"File d'attente, bus, métro, dès que j'ai 5 min de libre je lance l'application au lieu de passer mon temps sur les réseaux sociaux. Très productif, progrès visible dès les premiers jours."</p>
                     </div>
                 </div>
 
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"Réviser une information dans les deux sens en suivant la suite de Fibonacci. Simple et efficace pour retenir tout type de chose sur du long terme. J'adore le design de l'app."</p>
                     </div>
                 </div>
             </div>
