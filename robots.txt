@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: http://*
-
-
-Sitemap: https://www.memomental.io/sitemap.xml
+Sitemap: http://www.memomental.io/sitemap.xml
