@@ -19,22 +19,29 @@ footer{
     background-color: white;
 }
 
+
 #assets{
     min-height: 100vh;
     width: 100vw;
     background-color: #f3f3f3;
 }
 
+#blog{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
 #users{
     min-height: 50vh;
     width: 100vw;
-    background-color: #f3f3f3;
+    background-color: white ;
 }
 
 #features{
     min-height: 100vh;
     width: 100vw;
-    background-color: white;
+    background-color: #f3f3f3;
 }
 
 .button{
