@@ -1,249 +1,349 @@
-<!doctype html>
-<html lang="fr">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+<!DOCTYPE html>
+<html lang="en">
 
+<script src="uikit/dist/js/uikit-icons.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166283142-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
 
-        gtag('config', 'UA-166283142-1');
-      </script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memomental | FlashCard app</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Fira+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/animejs@2.2.0/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="header-shape header-shape-1">
+                <svg width="337" height="222" viewBox="0 0 337 222" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient x1="50%" y1="55.434%" x2="50%" y2="0%" id="header-shape-1">
+							<stop stop-color="#E0E1FE" stop-opacity="0" offset="0%" />
+							<stop stop-color="#E0E1FE" offset="100%" />
+						</linearGradient>
+					</defs>
+					<path d="M1103.21 0H1440v400h-400c145.927-118.557 166.997-251.89 63.21-400z"
+						transform="translate(-1103)" fill="url(#header-shape-1)" fill-rule="evenodd" />
+				</svg>
+            </div>
+            <div class="header-shape header-shape-2">
+                <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">
+					<defs>
+						<linearGradient x1="93.05%" y1="19.767%" x2="15.034%" y2="85.765%" id="header-shape-2">
+							<stop stop-color="#FF3058" offset="0%" />
+							<stop stop-color="#FF6381" offset="100%" />
+						</linearGradient>
+					</defs>
+					<circle class="anime-element fadeup-animation" cx="64" cy="64" r="64" fill="url(#header-shape-2)"
+						fill-rule="evenodd" />
+				</svg>
+            </div>
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+                                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+									<title>April</title>
+									<defs>
+										<linearGradient x1="114.674%" y1="39.507%" x2="-52.998%" y2="39.507%"
+											id="logo-a">
+											<stop stop-color="#8D92FA" offset="0%" />
+											<stop stop-color="#8D92FA" stop-opacity="0" offset="100%" />
+										</linearGradient>
+										<linearGradient x1="93.05%" y1="19.767%" x2="15.034%" y2="85.765%" id="logo-b">
+											<stop stop-color="#FF3058" offset="0%" />
+											<stop stop-color="#FF6381" offset="100%" />
+										</linearGradient>
+										<linearGradient x1="32.716%" y1="-20.176%" x2="32.716%" y2="148.747%"
+											id="logo-c">
+											<stop stop-color="#FF97AA" offset="0%" />
+											<stop stop-color="#FF97AA" stop-opacity="0" offset="100%" />
+										</linearGradient>
+									</defs>
 
-      <!-- Title & Icon -->
-        <title> Memomental | FlashCard app</title>
-        <meta name="description" content="Memomental est une application qui te permet d'apprendre tout ce que tu as toujours voulu savoir !">
-        <meta name="keywords" content="Memomental, Memoire, Apprentissage, Flashcards app">
-        <meta name="author" content="Florine PRATLONG & Axel DUVAL">
-        <link rel="icon" type="image/png" href="Landkit-1.1.0/src/assets/img/favicon.png" />
-
-        <!-- Core CSS -->        
-        <link rel="stylesheet" type="text/css" href="Landkit-1.1.0/src/assets/css/core.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
-
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" />
-
-        <!-- UIkit JS -->
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
-
-        <!-- UPDATED CSS -->
-        <link rel="stylesheet" href="./stylesheet.css">
-
-    </head>
-    <body>        
-        <section id="main">
-            <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-wrap" style="height: 100%;">
-                <div class="uk-width-1-1 uk-width-1-2@m">
-                    <img src="logo.png" alt="application" class="uk-align-center" id="logo">
-                </div>
-                <div class="uk-width-1-1 uk-width-1-2@m">
-                    <div id="title">
-                        <div class="uk-text-bold uk-heading-large uk-animation-scale-up uk-transform-origin-bottom-left" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Memomental<span style="color: #2ED197;">.</span></div>
-                        <h1 class="uk-h3 uk-margin-remove-top uk-animation-scale-up uk-transform-origin-bottom-left" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Avec Memomental, apprendre n'a jamais été aussi simple<span style="color: #2ED197;">.</span></h1>
-                        <h2 class="uk-h3 uk-margin-remove-top uk-animation-scale-up uk-transform-origin-bottom-left" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Une application de flashcard pour retenir <br> tout ce que vous avez toujours voulu apprendre <span style="color: #2ED197;">!</span></h2>
-                        <div style="margin-top: 2rem;" uk-scrollspy="target: > a; cls: uk-animation-fade; delay: 200;">
-                            <a class="uk-button uk-button-default" style="border-radius: 1.5rem;" href="https://youtu.be/QSUfySaBsQk" target="_blank">En savoir plus</a>
-                            <a class="uk-button uk-button-primary uk-margin-left" style="background-color: #2ED197;border-radius: 1.5rem;" href="https://app.memomental.io/">Jouer !</a>
-                            <br/>
-                            <br/>
-                            <a class="uk-button uk-button-default uk-margin-left" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197" href="https://memomental.netlify.app/">Rejoindre la bêta (Médecine)</a>
-                        </div>
+									<img class="mini-logo" src="src/images/logoGris.png" />
+								</svg>
+                            </a>
+                        </h1>
                     </div>
                 </div>
             </div>
-            <div style="position: absolute;bottom: 2%;left: 50%;transform: translateX(-50%);">
-                <a uk-icon="icon: chevron-down; ratio: 2" href="#assets"></a>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+                        <div class="hero-copy">
+                            <h1 class="hero-title mt-0">Memomental<span style="color: #2ED197;">.</span>
+                            </h1>
+
+                            <p class="hero-paragraph">Apprendre n'a jamais été aussi simple!</p>
+                            <div class="hero-form field field-grouped">
+                                <a class="-button -button-invert" href="https://youtu.be/QSUfySaBsQk">En savoir plus</a>
+                                <a class="-button" href="https://memomental.netlify.app/" id="beta">Jouer !</a>
+                            </div>
+
+
+                        </div>
+
+                        <div class="hero-illustration">
+                            <img class="worker" src="src/images/worker.png" />
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="features section">
+                <div class="container">
+                    <div class="features-inner section-inner">
+                        <div class="features-header text-center">
+                            <div class="container-sm">
+                                <h2 class="section-title mt-0">Ton cerveau peut tout retenir</h2>
+                                <p class="section-paragraph">Il lui faut seulement un peu d'entraînement</p>
+                            </div>
+                        </div>
+                        <div class="features-wrap">
+                            <div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon" style="background:#FFD2DA; display: flex; justify-content: center; align-items: center;">
+                                        <img src="src/images/artificial-intelligence.png " width="28 " height="28 " alt="Pas trouvé " style="z-index: 10; ">
+
+                                    </div>
+                                    <h4 class="feature-title h3-mobile mb-8">Développe tes connexions</h4>
+                                    <p class="text-sm">Ton cerveau n'aura jamais été aussi performant! Il te suffit juste de le stimuler.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon" style="background:#FFD8CD; display: flex; justify-content: center; align-items: center;">
+                                        <img src="src/images/target.png " width="28 " height="28 " alt="Pas trouvé " style="z-index: 10; ">
+
+                                    </div>
+                                    <h4 class="feature-title h3-mobile mb-8">Atteint tes objectifs</h4>
+                                    <p class="text-sm">Quelques minutes par jours suffisent pour atteindre les objectifs fixés tout en t'amusant. Ton temps sera optimisé et tu ne travailleras que les informations utiles.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="feature text-center is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon" style="background:#C6FDF3; display: flex; justify-content: center; align-items: center; ">
+                                        <img src="src/images/high-five.png " width="24 " height="24 " alt="Pas trouvé " style="z-index: 10; ">
+
+                                    </div>
+                                    <h4 class="feature-title h3-mobile mb-8 ">Apprends avec tes amis</h4>
+                                    <p class="text-sm ">L'apprentissage à plusieurs est le meilleur moyen de réviser toujours plus chaque jour. Bats les en gagnant des points et en réalisant des combos !
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="feature text-center is-revealing ">
+                                <div class="feature-inner ">
+                                    <div class="feature-icon " style="background:#E0E1FE; display: flex; justify-content: center; align-items: center; ">
+                                        <img src="src/images/profits.png " width="24 " height="24 " alt="Pas trouvé " style="z-index: 10; ">
+                                    </div>
+                                    <h4 class="feature-title h3-mobile mb-8 ">Suis ton évolution</h4>
+                                    <p class="text-sm ">Tu peux visualiser ton évolution grâce à la section statistiques.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials section ">
+                <div class="testimonials-shape testimonials-shape-1 ">
+                    <svg width="280 " height="280 " viewBox="0 0 280 280 " xmlns="http://www.w3.org/2000/svg ">
+						<defs>
+							<linearGradient x1="100% " y1="0% " x2="0% " y2="100% " id="testimonials-shape-1 ">
+								<stop stop-color="#261FB6 " offset="0% " />
+								<stop stop-color="#4950F6 " offset="100% " />
+							</linearGradient>
+						</defs>
+						<circle cx="140 " cy="685 " r="140 " transform="translate(0 -545) "
+							fill="url(#testimonials-shape-1) " fill-rule="evenodd " />
+					</svg>
+                </div>
+                <div class="testimonials-shape testimonials-shape-2 ">
+                    <svg width="125 " height="107 " viewBox="0 0 125 107 " xmlns="http://www.w3.org/2000/svg ">
+						<g fill="none " fill-rule="evenodd ">
+							<circle fill="#C6FDF3 " cx="48 " cy="59 " r="48 " />
+							<path
+								d="M58.536 39.713c0-6.884 1.72-14.007 5.163-21.368 3.443-7.36 8.167-13.458 14.173-18.292l11.645 7.91c-3.589 4.98-6.262 10.016-8.02 15.106S78.86 33.598 78.86 39.384v13.623H58.536V39.713z "
+								fill="#55EBD0 " />
+							<path
+								d="M93.252 39.713c0-6.884 1.722-14.007 5.164-21.368 3.442-7.36 8.166-13.458 14.172-18.292l11.646 7.91c-3.589 4.98-6.262 10.016-8.02 15.106s-2.637 10.529-2.637 16.315v13.623H93.252V39.713z "
+								fill="#1ADAB7 " />
+						</g>
+					</svg>
+                </div>
+                <div class="testimonials-shape testimonials-shape-3 ">
+                    <svg width="48 " height="48 " viewBox="0 0 48 48 " mlns="http://www.w3.org/2000/svg ">
+						<defs>
+							<linearGradient x1="93.05% " y1="19.767% " x2="15.034% " y2="85.765% "
+								id="testimonials-shape-3 ">
+								<stop stop-color="#FF3058 " offset="0% " />
+								<stop stop-color="#FF6381 " offset="100% " />
+							</linearGradient>
+						</defs>
+						<circle cx="24 " cy="434 " r="24 " transform="translate(0 -410) "
+							fill="url(#testimonials-shape-3) " fill-rule="evenodd " />
+					</svg>
+                </div>
+                <div class="container ">
+                    <div class="testimonials-inner section-inner ">
+                        <h2 class="section-title mt-0 text-center ">Nos utilisateurs sont ceux qui en parlent le mieux
+                        </h2>
+                        <div class="testimonials-wrap ">
+                            <div class="testimonial text-xs is-revealing ">
+                                <div class="testimonial-inner ">
+                                    <div class="testimonial-main ">
+                                        <div class="testimonial-header ">
+                                            <img class="mb-16 " src="src/images/testimonial-01.png " alt="Testimonial ">
+                                        </div>
+                                        <div class="testimonial-body ">
+                                            <p class="mb-0 ">File d'attente, bus, métro, dès que j'ai 5 min de libre je lance l'application au lieu de passer mon temps sur les réseaux sociaux. Très productif, progrès visible dès les premiers jours.</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-footer ">
+                                        <div class="testimonial-link ">
+                                            <a href="# ">Fiona</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial text-xs is-revealing ">
+                                <div class="testimonial-inner ">
+                                    <div class="testimonial-main ">
+                                        <div class="testimonial-header ">
+                                            <img class="mb-16 " src="src/images/testimonial-02.png " alt="Testimonial ">
+                                        </div>
+                                        <div class="testimonial-body ">
+                                            <p class="mb-0 ">Réviser une information dans les deux sens en suivant la suite de Fibonacci. Simple et efficace pour retenir tout type de chose sur du long terme. J'adore le design de l'app.</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-footer ">
+                                        <div class="testimonial-link ">
+                                            <a href="# ">Toinon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial text-xs is-revealing ">
+                                <div class="testimonial-inner ">
+                                    <div class="testimonial-main ">
+                                        <div class="testimonial-header ">
+                                            <img class="mb-16 " src="src/images/testimonial-03.png " alt="Testimonial ">
+                                        </div>
+                                        <div class="testimonial-body ">
+                                            <p class="mb-0 ">J'adore! Cela faisait longtemps que je cherchais une app gratuite comme celle là et je ne suis pas déçu. Design au top et c'est l'une des meilleures méthodes d'apprentissage que j'ai pu tester.</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-footer ">
+                                        <div class="testimonial-link ">
+                                            <a href="# ">Luca</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer ">
+            <div class="container ">
+                <div class="site-footer-inner has-top-divider ">
+                    <div class="brand footer-brand ">
+                        <a href="# ">
+                            <svg width="32 " height="32 " xmlns="http://www.w3.org/2000/svg ">
+								<title>April</title>
+								<defs>
+									<linearGradient x1="114.674% " y1="39.507% " x2="-52.998% " y2="39.507% "
+										id="logo-footer-a ">
+										<stop stop-color="#8D92FA " offset="0% " />
+										<stop stop-color="#8D92FA " stop-opacity="0 " offset="100% " />
+									</linearGradient>
+									<linearGradient x1="93.05% " y1="19.767% " x2="15.034% " y2="85.765% "
+										id="logo-footer-b ">
+										<stop stop-color="#FF3058 " offset="0% " />
+										<stop stop-color="#FF6381 " offset="100% " />
+									</linearGradient>
+									<linearGradient x1="32.716% " y1="-20.176% " x2="32.716% " y2="148.747% "
+										id="logo-footer-c ">
+										<stop stop-color="#FF97AA " offset="0% " />
+										<stop stop-color="#FF97AA " stop-opacity="0 " offset="100% " />
+									</linearGradient>
+								</defs>
+
+								<img class="mini-logo " src="src/images/logoGris.png " />
+
+							</svg>
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset ">
+                        <li>
+
+                            <a href="mailto:app.memomental@gmail.com?body=Salut l'équipe Memomental,">app.memomental@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">La team</a>
+                        </li>
+                        <li>
+                            <a href="./faq.html">FAQ's</a>
+                        </li>
+
+                    </ul>
+                    <ul class="footer-social-links list-reset ">
+                        <li>
+
+                            <a href="https://www.facebook.com/Memomental-106515468232487/ " uk-icon="icon: facebook "></a>
+
+
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Memomental1 " uk-icon="icon: twitter ">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/memomental_fr/ " uk-icon="icon: instagram ">
+
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="# " uk-icon="icon: linkedin ">
+
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                    <div class="footer-copyright ">&copy; 2021 Memomental, tous droits réservés.</div>
+                </div>
             </div>
-        </section>
-
-        <section id="assets">
-            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Ton cerveau peut tout retenir</h2>
-            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">Il lui faut seulement un peu d'entraînement</h3>
-            <div style="border-bottom: solid 2px #2ED197;width: 10%; margin: auto;margin-top: 4rem;"></div>
-            <div class="uk-flex uk-flex-center uk-text-center uk-flex-wrap uk-flex-wrap-around" style="margin-top:5rem;" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300;">
-
-                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">                    
-                    <div class="uk-card-body">
-                        <img src="Landkit-1.1.0/src/assets/img/icons/web.svg" alt="Image d'une toile web" height="170px" width="170px">
-                        <div>
-                            <div style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Développes tes connexions</div>
-                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Ton cerveau n'aura jamais été aussi performant, il suffisait juste de le stimuler.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
-                    <div class="uk-card-body">
-                        <img src="Landkit-1.1.0/src/assets/img/icons/rocket.svg" alt="Image d'une fusée" height="170px" width="170px">
-                        <div>
-                            <div style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Fixes toi des objectifs</div>
-                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Quelques minutes par jours suffisent pour atteindre tes objectifs tout en t'amusant.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
-                    <div class="uk-card-body">
-                        <img src="Landkit-1.1.0/src/assets/img/icons/light-bulb.svg" alt="Image d'une ampoule" height="170px" width="170px">
-                        <div>
-                            <div style="font-family: 'Montserrat'; font-weight: 600;color: #2D2A32;" class="uk-h3 uk-margin-top uk-text-center">Sois créatif</div>
-                            <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">Tu peux créer tes propres paquets. Retiens seulement les informations qui te sont utiles.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog">
-            <h2 class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Comment fonctionne la mémoire ?</h2>
-            <h3 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">Un outil basé sur une méthode scientifique !</h3>
-                <h4 class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">Les sciences cognitives... </h4>
-            <div style="border-bottom: solid 2px #2ED197;width: 10%; margin: auto;margin-top: 4rem;"></div>
-            <div class="uk-flex uk-flex-center uk-text-center uk-flex-wrap" style="margin-top:5rem;" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300;">
-            <p class="uk-padding-medium uk-padding-left uk-padding-right" style="margin-right:5rem; margin-left:5rem">
-                <B>Les sciences cognitives</B>, ont pour but de décrire, d'expliquer, ou même de simuler la pensée humaine, animale ou artificielle.<br/>
-                Elles sont composées de 6 disciplines scientifiques que nous ne détaillerons pas toutes ici, mais seulement celles qui nous intéressent : <B> les Neurosciences. </B>
-                Depuis la fin des années 1950, les neurosciences expliquent le fonctionnement de la mémoire.
-                Nous pouvons aujourd'hui savoir quelle partie du cerveau, nous permet de retenir tel ou tel type d'information.<br/>
-                Ainsi il est possible de reconstituer le fonctionnement de la mémoire.<br/><br/>
-                <B>Alors comment fonctionne memomental ?</B> <br/><br/>
-                Memomental utilise des cartes qui ont la particularité de se réviser dans les deux sens.<br/>
-                Cette méthode permet de multiplier les connexions neuronales lors de l'apprentissage.
-                Pourquoi c'est efficace ?!<br/>
-                Généralement c'est toujours plus facile de retenir une information dans un seul sens.<br/>
-                Par exemple : si on nous montre un drapeau que l'on ne voit pas tous les jours il nous sera plus facile de retrouver le pays auquel il appartient que si on devait chercher le drapeau d'un pays données
-                parmis une multitude d'autres drapeaux. <B> Faites le test et vous verrez de quoi que je veux parler </B> (Il vous suffit d'aller sur la bêta de Memomental et de télécharger le paquet sur les drapeaux 😉.)
-                Donc si on est capable de connaître une information dans son sens le plus difficile, il sera encore plus facile de la retenir dans son sens le plus évident. <br/>
-                Ce n'est que la première facette de Memomental, c'est bien de connaître une information dans les deux sens mais il n'y a pas de <B> magie </B>
-                pour retenir une information, il faut la <B>réviser. </B> Heureusement, il y a une méthode rigoureuse et optimale de révision pour que le cerveau assimile au mieux
-                cette nouvelle information.
-                Elle consiste à réviser l'information selon une suite mathématique (qui pour le coup elle, est un peu <B>magique.</B>) Cette suite, c'est <B>la suite de Fibonacci.</B> <br/>
-                Pour ceux qui ne connaissent pas cette suite ressemble à ça : <br/><br/>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">1</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">1</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">2</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">3</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">5</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">8</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">13</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">21</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">34</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">55</a>
-                <a class="uk-button uk-button-default" style="background-color: #FFFFFF;border-radius: 1.5rem; border-color:#2ED197">89</a><br/><br/>
-                Dans notre méthode, ces nombres représentent donc l'intervalle de temps (en jour) entre chaque révision.<br/>
-                Grâce à tout ça, votre cerveau est capable de retenir n'importe quelle information et surtout de l'encrer de façon durable dans le temps.
-                Alors convaincu ? N'attendez plus pour réviser ! Votre cerveau à besoin de vous. 🧠
-
-                <br/>
-            </p>
-
-            </div>
-        </section>
-
-        <section id="features" class="section">
-            <div class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Fonctionnalités</div>
-            <div class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">Rendons à ton cerveau ses capacités</div>
-            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-wrap uk-flex-wrap-around uk-margin-large-top" uk-scrollspy="target: > div; cls: uk-animation-scale-up; delay: 300;" style="width: 94%;margin-left: 3%;">
-                
-                <div class="uk-width-1-1 uk-width-1-2@m">
-                    <div class="uk-align-right@m uk-margin-right@m uk-width-1-2@m">
-                        <div style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Apprends avec tes amis</div>
-                        <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Challenge tes amis sur des paquets de cartes.
-                        L'apprentissage à plusieurs est le meilleur moyen de réviser toujours plus chaque jour.</p>
-                    </div>
-                </div>
-                <div class="uk-width-1-1 uk-width-1-2@m">
-                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/position.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-left@m">
-                </div>
-                <div class="uk-width-1-1 uk-width-1-2@m">
-                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/capitale.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-right@m">
-                </div>
-                <div class="uk-width-1-1 uk-width-1-2@m">
-                    <div class="uk-align-left@m uk-margin-left@m uk-width-1-2@m">
-                        <div style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Révises tes cartes</div>
-                        <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Chaque jour les cartes que tu dois réviser te seront proposées. Tu peux gagner des points bonus si tu réalises des combos !</p>
-                    </div>
-                </div>
-                <div class="uk-width-1-1 uk-width-1-2@m">
-                    <div class="uk-align-right@m uk-margin-right@m uk-width-1-2@m">
-                        <div style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;">Suis ton évolution</div>
-                        <p class="uk-text-justify" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;">Tu peux visualiser ton évolution en direct sur l'écran principal de l'application. Tu auras bientôt accès à une section statistiques.</p>
-                    </div>
-                </div>
-                <div class="uk-width-1-1 uk-width-1-2@m">
-                    <img src="Landkit-1.1.0/src/assets/img/illustrations/features/home.png" alt="image1" class="uk-width-1-2@m uk-align-center uk-align-left@m">
-                </div>              
-            </div>
-            
-        </section>
-        <section id="users" class="section">
-            <div class="uk-text-bold uk-h1 uk-text-center" style="font-family: 'Montserrat'; font-weight: 700;color: #2D2A32;padding-top: 5rem;" uk-scrollspy="cls: uk-animation-slide-top">Nos utilisateurs adorent</div>
-            <div class="uk-h3 uk-text-center" style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" uk-scrollspy="cls: uk-animation-slide-top">C'est eux qui en parlent le mieux</div>
-            <div style="border-bottom: solid 2px #2ED197;width: 10%; margin: auto;margin-top: 4rem;"></div>
-            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-wrap uk-flex-wrap-around" style="margin-top:5rem;margin-bottom: 5rem;" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300;">
-
-                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
-                    <div class="uk-card-header">
-                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto">
-                                <img class="uk-border-circle" alt="Image dessin d'une fille " width="70" height="70" src="Landkit-1.1.0/src/assets/img/illustrations/faces/2.png">
-                            </div>
-                            <div class="uk-width-expand">
-                                <div class="uk-card-title uk-margin-remove-bottom">Lucas</div>
-                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-15T19:00">14 Juin 2020</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"J'adore! Cela faisait longtemps que je cherchais une app gratuite comme celle là et je ne suis pas déçu. Design au top et c'est l'une des meilleures méthodes d'apprentissage que j'ai pu tester."</p>
-                    </div>
-                </div>
-
-                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">                    
-                    <div class="uk-card-header">
-                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto">
-                                <img class="uk-border-circle" alt="image dessin d'un garcon " width="70" height="70" src="Landkit-1.1.0/src/assets/img/illustrations/faces/1.png">
-                            </div>
-                            <div class="uk-width-expand">
-                                <div class="uk-card-title uk-margin-remove-bottom">Fiona</div>
-                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-15T19:00">15 Juin 2020</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"File d'attente, bus, métro, dès que j'ai 5 min de libre je lance l'application au lieu de passer mon temps sur les réseaux sociaux. Très productif, progrès visible dès les premiers jours."</p>
-                    </div>
-                </div>
-
-                <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-4@m uk-margin-small-left uk-margin-small-right uk-margin-bottom uk-card-default uk-card-hover">
-                    <div class="uk-card-header">
-                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto">
-                                <img class="uk-border-circle" alt="image dessin d'un garcon" width="70" height="70" src="Landkit-1.1.0/src/assets/img/illustrations/faces/3.png">
-                            </div>
-                            <div class="uk-width-expand">
-                                <div class="uk-card-title uk-margin-remove-bottom">Toinon</div>
-                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-15T19:00">11 Juin 2020</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p style="font-family: 'Montserrat'; font-weight: 400;color: #2D2A32;" class="uk-text-center">"Réviser une information dans les deux sens en suivant la suite de Fibonacci. Simple et efficace pour retenir tout type de chose sur du long terme. J'adore le design de l'app."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <p class="uk-text-center">&copy;Memomental 2020-2021 | Made in Montpellier</p>
         </footer>
-    </body>
+    </div>
+
+    <script src="dist/js/main.min.js "></script>
+</body>
+
 </html>
