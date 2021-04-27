@@ -343,7 +343,7 @@ img {
 
 p:not(.u-text-variant) {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 3rem;
 }
 
 .u-text-palette-1-base,
